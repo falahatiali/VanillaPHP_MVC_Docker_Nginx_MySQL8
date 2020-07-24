@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+            </li>
+            {#{% if auth.check %}#}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+            {#{% endif %}#}
+        </ul>
+        <ul class="navbar-nav">
+            {#{% if auth.check %}#}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ali</a>
+                </li>
+            {#{% else %}#}
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Sign in</a>
+                </li>
+
+            {#{% endif %}#}
+        </ul>
+    </div>
+</nav>
+
+{#<form action="{{ route('auth.logout') }}" method="POST" style="display: none;" id="logout">#}
+    {#<input type="hidden" name="{{ csrf.key }}" value="{{ csrf.token }}">#}
+{#</form>#}

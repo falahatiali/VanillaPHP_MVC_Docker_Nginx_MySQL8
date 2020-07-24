@@ -1,0 +1,30 @@
+{
+    "name": "alifalahati/yektadg_project",
+    "description": "A sample project for yektaDG interview",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali Falahati",
+            "email": "alifalahati2010@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.1",
+        "league/route": "^3.0",
+        "zendframework/zend-diactoros": "^1.7",
+        "twig/twig": "^2.4",
+        "symfony/var-dumper": "^4.0",
+        "doctrine/orm": "^2.7",
+        "vlucas/valitron": "^1.4",
+        "doctrine/dbal": "^2.10"
+    },
+    "autoload":{
+        "psr-4":{
+            "App\\":"app"
+        },
+        "files":[
+            "app/Helper/Helper.php"
+        ]
+    }
+}

@@ -6,7 +6,6 @@ namespace App\Session;
 
 class Session implements SessionStore
 {
-
     public function get($key, $default = null)
     {
         if ($this->exists($key)){

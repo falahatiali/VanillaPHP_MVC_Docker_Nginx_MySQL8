@@ -6,14 +6,24 @@
             <form action="/auth/login" method="POST">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" class="form-control">
+                    <input type="text" name="email" id="email" class="form-control{{ errors.email ? ' is-invalid':''}}">
+
+                    {% if errors.email %}
+                        <div class="invalid-feedback">
+                            {{  errors.email | first }}
+                        </div>
+                    {% endif %}
 
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" class="form-control">
+                    <input type="password" name="password" id="password" class="form-control{{ errors.password ? ' is-invalid':''}}">
 
-
+                    {% if errors.password %}
+                        <div class="invalid-feedback">
+                            {{  errors.password | first }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="form-check">
                     <label for="remember" class="form-check-label">

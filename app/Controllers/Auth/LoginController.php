@@ -35,8 +35,9 @@ class LoginController extends Controller
 	public function login(RequestInterface $request , ResponseInterface $response)
 	{
 		$this->validate($request , [
-		    'email' => ['required' , 'email'],
-		    'password' => ['required' ],
+//		    'username'  => ['required' , 'email' , 'min' => [] ,[ 'regex' =>'/^[A-Za-z]\w+$/' ]],
+		    'email'     => ['required' , 'email' , ['lengthMin', 10]],
+		    'password'  => ['required' ,  ['lengthMin', 8]],
         ]);
 	}
 }

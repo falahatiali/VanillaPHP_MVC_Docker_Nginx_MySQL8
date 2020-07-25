@@ -13,5 +13,12 @@ return [
 		\App\Providers\AppServiceProvider::class,
 		\App\Providers\ViewServiceProvider::class,
 		\App\Providers\DatabaseServiceProvider::class,
-	]
+		\App\Providers\ViewShareServiceProvider::class,
+        \App\Providers\SessionServiceProvider::class
+	],
+
+    'middlewares' => [
+        \App\Middlewares\ShareValidationErrors::class,
+        \App\Middlewares\ClearValidationErrors::class,
+    ]
 ];

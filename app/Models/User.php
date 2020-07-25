@@ -26,6 +26,11 @@ class User extends Model
 	 */
 	protected $name;
 
+    /**
+     * @email @Column(type="string")
+     */
+    protected $username;
+
 	/**
 	 * @email @Column(type="string")
 	 */

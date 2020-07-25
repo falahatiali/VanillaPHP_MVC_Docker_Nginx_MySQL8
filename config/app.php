@@ -13,13 +13,15 @@ return [
 		\App\Providers\AppServiceProvider::class,
 		\App\Providers\ViewServiceProvider::class,
 		\App\Providers\DatabaseServiceProvider::class,
-		\App\Providers\ViewShareServiceProvider::class,
+		\App\Providers\SessionServiceProvider::class,
 		\App\Providers\HashServiceProvider::class,
-        \App\Providers\SessionServiceProvider::class
+		\App\Providers\AuthServiceProvider::class,
+		\App\Providers\ViewShareServiceProvider::class,
 	],
 
     'middlewares' => [
-        \App\Middlewares\ShareValidationErrors::class,
+		\App\Middlewares\Authenticate::class,
+		\App\Middlewares\ShareValidationErrors::class,
         \App\Middlewares\ClearValidationErrors::class,
     ]
 ];

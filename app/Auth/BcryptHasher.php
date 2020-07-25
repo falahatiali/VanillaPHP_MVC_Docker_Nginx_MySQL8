@@ -25,6 +25,7 @@ class BcryptHasher implements Hasher
 
     public function needsRehash($hash)
     {
+    	return password_needs_rehash($hash , PASSWORD_BCRYPT , $this->options());
     }
 
     private function options()

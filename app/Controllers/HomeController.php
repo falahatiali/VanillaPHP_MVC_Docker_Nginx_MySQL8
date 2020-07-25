@@ -9,6 +9,8 @@
 namespace App\Controllers;
 
 
+use App\Auth\Auth;
+use App\Session\SessionStore;
 use App\Views\View;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -19,15 +21,7 @@ class HomeController extends Controller
 	 * @var \App\Views\View
 	 */
 	private $view;
-	/**
-	 * @var \Doctrine\ORM\EntityManager
-	 */
-	private $db;
 
-	/**
-	 * HomeController constructor.
-	 * @param \App\Views\View             $view
-	 */
 	public function __construct(View $view)
 	{
 		$this->view = $view;

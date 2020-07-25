@@ -14,6 +14,7 @@ return [
 		\App\Providers\ViewServiceProvider::class,
 		\App\Providers\DatabaseServiceProvider::class,
 		\App\Providers\ViewShareServiceProvider::class,
+		\App\Providers\HashServiceProvider::class,
         \App\Providers\SessionServiceProvider::class
 	],
 

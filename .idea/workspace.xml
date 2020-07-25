@@ -20,24 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="024471f6-a8b3-43e3-bd90-90c2eba83285" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Middlewares/ClearValidationErrors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Middlewares/ShareValidationErrors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/SessionServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/ViewShareServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Session/Session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Views/Extensions/PathExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/middleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Auth/BcryptHasher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Auth/Hasher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/HashServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ViewServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/login.twig" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/login.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/templates/partials/_navigation.twig" beforeDir="false" afterPath="$PROJECT_DIR$/views/templates/partials/_navigation.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +114,7 @@
       <updated>1595581275524</updated>
       <workItem from="1595581276797" duration="29586000" />
       <workItem from="1595652242456" duration="13539000" />
-      <workItem from="1595675034496" duration="7293000" />
+      <workItem from="1595675034496" duration="9024000" />
     </task>
     <servers />
   </component>
@@ -147,10 +134,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1595680035160">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1595684094271">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1595680035160" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1595684094271" />
+    <state x="648" y="201" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595683870302">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="648" y="201" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1595683870302" />
     <state x="530" y="185" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595678153142">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -159,10 +150,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1595660317218" />
-    <state x="531" y="153" key="NewPhpClassDialog" timestamp="1595680546661">
+    <state x="531" y="153" key="NewPhpClassDialog" timestamp="1595684080200">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="531" y="153" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1595680546661" />
+    <state x="531" y="153" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1595684080200" />
     <state x="634" y="353" key="NewPhpFileDialog" timestamp="1595676189227">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

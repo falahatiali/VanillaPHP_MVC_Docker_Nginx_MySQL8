@@ -13,7 +13,7 @@ use App\Views\View;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class HomeController
+class HomeController extends Controller
 {
 	/**
 	 * @var \App\Views\View

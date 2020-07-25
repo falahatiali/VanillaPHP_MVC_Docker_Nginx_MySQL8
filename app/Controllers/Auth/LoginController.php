@@ -9,11 +9,12 @@
 namespace App\Controllers\Auth;
 
 
+use App\Controllers\Controller;
 use App\Views\View;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class LoginController
+class LoginController extends Controller
 {
 
 	/**
@@ -31,8 +32,11 @@ class LoginController
 		return $this->view->render($response , 'auth/login.twig');
 	}
 
-	public function login()
+	public function login(RequestInterface $request , ResponseInterface $response)
 	{
-		dump('login');
+		$this->validate($request , [
+		    'email' => ['required' , 'email'],
+		    'password' => ['required' ],
+        ]);
 	}
 }

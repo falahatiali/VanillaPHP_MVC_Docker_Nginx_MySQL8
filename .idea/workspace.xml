@@ -16,15 +16,38 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="024471f6-a8b3-43e3-bd90-90c2eba83285" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Auth/BcryptHasher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Auth/Hasher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/HashServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Auth/Auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Middlewares/Authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/init-db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/nginx/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/www.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Auth/BcryptHasher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Auth/BcryptHasher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/ViewShareServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ViewShareServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Session/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Session/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Session/SessionStore.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Session/SessionStore.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.twig" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/templates/partials/_navigation.twig" beforeDir="false" afterPath="$PROJECT_DIR$/views/templates/partials/_navigation.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,19 +110,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jiring/reporting_panel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Session" />
       <recent name="C:\Users\a.falahati\Desktop\projects\php\MVC" />
       <recent name="$PROJECT_DIR$/views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -119,7 +142,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -134,6 +157,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="556" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595763210262">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="556" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1595763210262" />
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1595684094271">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

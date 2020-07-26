@@ -13,7 +13,7 @@ abstract class Model
 	public function __get($name)
 	{
 		if(property_exists($this  , $name)){
-			return $this->name;
+			return $this->{$name};
 		}
 	}
 

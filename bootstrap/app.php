@@ -22,6 +22,10 @@ try{
         $container->get('request') , $container->get('response')
     );
 }catch (\Exception $exception){
-    $handler = new \App\Exceptions\Handler($exception , $container->get(\App\Session\SessionStore::class));
+    $handler = new \App\Exceptions\Handler(
+    	$exception ,
+		$container->get('response'),
+		$container->get(\App\Session\SessionStore::class),
+		$container->get(App\Views\View::class));
     $response = $handler->respond();
 }

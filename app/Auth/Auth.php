@@ -76,6 +76,12 @@ class Auth
 		return $this->hasUserInSession();
 	}
 
+	public function logout()
+	{
+		$this->session->clear($this->key());
+	}
+
+
 	public function getByEmailOrUsername($username){
 		if (filter_var($username, FILTER_VALIDATE_EMAIL)){
 			$compare = ['email' => $username];

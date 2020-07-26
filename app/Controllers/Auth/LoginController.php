@@ -53,7 +53,6 @@ class LoginController extends Controller
 	public function login(RequestInterface $request , ResponseInterface $response)
 	{
 		$data = $this->validate($request , [
-//		    'username'  => ['required' , 'email' , 'min' => [] ,[ 'regex' =>'/^[A-Za-z]\w+$/' ]],
 		    'email'     => ['required' , 'email' , ['lengthMin', 10]],
 		    'password'  => ['required' ,  ['lengthMin', 8]],
         ]);
@@ -65,5 +64,12 @@ class LoginController extends Controller
 		}
 
 		return redirect($this->route->getNamedRoute('home')->getPath());
+	}
+
+	public function logout($request, $response)
+	{
+		$this->auth->logout();
+
+		return redirect('/');
 	}
 }

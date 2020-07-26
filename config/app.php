@@ -16,12 +16,15 @@ return [
 		\App\Providers\SessionServiceProvider::class,
 		\App\Providers\HashServiceProvider::class,
 		\App\Providers\AuthServiceProvider::class,
+		\App\Providers\CsrfServiceProvider::class,
 		\App\Providers\ViewShareServiceProvider::class,
+		\App\Providers\ValidationServiceProvider::class,
 	],
 
     'middlewares' => [
 		\App\Middlewares\Authenticate::class,
 		\App\Middlewares\ShareValidationErrors::class,
         \App\Middlewares\ClearValidationErrors::class,
+        \App\Middlewares\CsrfGuard::class,
     ]
 ];

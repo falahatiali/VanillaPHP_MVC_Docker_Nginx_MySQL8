@@ -4,6 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-6">
             <form action="/auth/login" method="POST">
+                <input type="hidden" name="{{ csrf.key }}" value="{{ csrf.token }}">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" class="form-control{{ errors.email ? ' is-invalid':''}}">

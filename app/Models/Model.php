@@ -25,4 +25,16 @@ abstract class Model
 
 		return false;
 	}
+
+	public function fill(array $columns)
+	{
+		$this->update($columns);
+	}
+
+	public function update(array $columns)
+	{
+		foreach ($columns as $column => $value) {
+			$this->{$column} = $value;
+		}
+	}
 }

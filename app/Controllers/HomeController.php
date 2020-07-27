@@ -41,6 +41,7 @@ class HomeController extends Controller
 
 	public function home(RequestInterface $request , ResponseInterface $response)
 	{
+//		dump($this->db->getRepository(User::class)->findAll());
 		if ($this->auth->check()){
 			$users = $this->db->getRepository(User::class)->findAll();
 		}else{

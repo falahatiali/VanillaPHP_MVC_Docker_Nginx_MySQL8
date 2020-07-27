@@ -51,7 +51,6 @@ class RegisterController extends Controller
 	public function register($request, $response)
 	{
 		$data = $this->validateRegistration($request);
-		dump($data);
 
 		$user = $this->createUser($data);
 

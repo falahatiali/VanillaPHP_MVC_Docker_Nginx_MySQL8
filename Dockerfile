@@ -33,7 +33,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     && rm -rf /var/list/apt/* \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
-
+    
 # create document root
 RUN mkdir -p $APP_HOME/public
 
@@ -55,7 +55,7 @@ USER www-data
 
 # copy source files and config file
 COPY --chown=www-data:www-data . $APP_HOME/
-COPY --chown=www-data:www-data .env.$ENV $APP_HOME/.env
+COPY --chown=www-data:www-data .env.example $APP_HOME/.env
 
 # install all PHP dependencies
 RUN composer install --optimize-autoloader --no-interaction --no-progress;

@@ -25,6 +25,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     && docker-php-ext-configure intl \
     && docker-php-ext-install \
       pdo_mysql \
+      mysqli \
       sockets \
       intl \
       opcache \
@@ -33,7 +34,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     && rm -rf /var/list/apt/* \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
-    
+
 # create document root
 RUN mkdir -p $APP_HOME/public
 
@@ -52,6 +53,9 @@ WORKDIR $APP_HOME
 RUN mkdir -p /var/www/.composer && chown -R www-data:www-data /var/www/.composer
 
 USER www-data
+
+# change owner
+RUN chown -R www-data:www-data /var/www/html
 
 # copy source files and config file
 COPY --chown=www-data:www-data . $APP_HOME/

@@ -18,3 +18,5 @@ $route->group('/auth' , function ($route){
 	$route->post('/register', 'App\Controllers\Auth\RegisterController::register');
 
 });
+
+$route->get('users/all' , 'App\Controllers\UsersController::index')->setName('users.all');

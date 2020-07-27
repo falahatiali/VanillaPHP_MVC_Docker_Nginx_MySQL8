@@ -4,19 +4,14 @@ services:
 
   nginx:
     image: nginx:1.19.1
-#    build:
-#      context: ./docker/
-#      args:
-#        - "BUILD_ARGUMENT_ENV=dev"
-#      dockerfile: ./nginx/Dockerfile
     container_name: nginx
     restart: always
     ports:
-      - 80:80
+      - 8086:80
       - 443:443
     volumes:
       - .:/var/www/html:ro
-      - ./docker/nginx/nginx.conf:/etc/nginx/website.conf
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/website.conf
       - ./docker/storage/logs/nginx:/var/logs/nginx
     depends_on:
       - yektadgphp

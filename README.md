@@ -4,50 +4,35 @@ WRITER: Ali falahati (alifalahati2010@gmail.com)
 
 #START
 
-این پروژه بر اساس چهارچوب ام وی سی شخصی سازی شده و از بیس طراحی شده است.
-تمامی موارد از ابتدا و کلاس ها به صورت کامل اختصاصی (تقریبا شبیه به ساختار لاراول) برای پروژه فعلی در نظر گرفته شده است
-برای طراحی این ساختار از تعدادی لایبرری و کتابخوانه استفاده شده که در زیر آنها را بیان میکنم.
-اگر قصد دارید این پروژه را به صورت معمولی اجرا کنید ابتدا آن را در مسیر دلخواهتان قرار داده
-دستور زیر را تایپ کنید در ترمینال: 
+This project is based on a custom MVC framework and designed from scratch, with classes tailored specifically for the current project (similar to Laravel's structure). Several libraries and dependencies were used in the design of this structure, which are mentioned below. If you intend to run this project in the regular manner, first place it in your desired directory and type the following command in the terminal:
 
 ```
 cp .env.example .env
-``` 
- و سپس در دیتابیس  و به مسیر
-  
-docker 
-بروید و دستورات داخل فایل init-db.sql را کپی کرده و در کامندلاین دیتابیس وارد کنید یا اینکه فایل را ایمپورت کنید تا دیتابیس ساخته شود
-اکنون با استفاده از ترمینال به ادرس روت پروژه رفته و دستور زیر را بزنید: 
+```
+Then, in the database directory, navigate to the `docker` folder and copy the commands from the `init-db.sql` file and execute them in the command line to create the database, or import the file directly. Now, navigate to the root directory of the project using the terminal and run the following command:
+
 ```
 php -S 127.0.0.1:8888 -t public/
-```  
+```
+Open your browser and go to `localhost:8888`. Please ensure that you have set the appropriate configurations in the `.env` file.
 
-حال مرورگر خود را باز کرده و سپس به ادرس localhost:8888بروید. فقط حتما در فایل
-
-برای اجرای این پروژه با استفاده از داکر کافی است به ترتیب دستورات زیر را اجرا کنید
-. فقط باید داکر بر روی سیستم خود نصب داشته باشید.
-ابتدا دستور زیر را در ترمینال خود تایپ کنید 
+To run this project using Docker, simply execute the following commands in order. However, you must have Docker installed on your system. First, type the following command in your terminal:
 
 ```
 docker network create yektadg_network
 ```
-
-سپس دستور زیر را بزنید : 
+Then, run the following command:
 
 ```
 docker-compose -f docker-compose.yml up -d
 ```
+After downloading the required images and running the containers, type the following command:
 
-
-بعد از دانلود ایمیج های مورد نیاز و اجرای کانتینر ها دستور زیر را تایپ نمایید: 
 ```
 docker ps
 ```
+The output of this command should display three containers named `yektadgphp`, `mysqldb`, and `nginx`. Now, open the `.env` file and modify the values as follows:
 
-
-خروجی این دستور باید سه عدد کانتینر به نام های yektadgphp , mysqldb , nginx باشد
-حال به فایل .env بروید و مطابق زیر مقادیر آن را تغییر دهید :
- 
 ```
 DB_TYPE=mysql
 DB_DRIVER=pdo_mysql
@@ -57,47 +42,48 @@ DB_DATABASE=yektadg_db
 DB_USERNAME=root
 DB_PASSWORD=123456789
 ```
+Next, open your browser and go to the following address:
 
-‍‍‍‍‍‍حال به مرورگر خود رفته و به آدرس زیر بروید:
- 
 ```
 http://127.0.0.1:8086/
 ```
 
 ************************
-This is a custom MVC framework written by vanilla PHP
-this project using composer for autoloading and also namespace
 
+This project is a custom MVC framework written in vanilla PHP. It utilizes Composer for autoloading and implements namespaces.
 
-برای امنیت بیشتر و در  دسترس بودن تصمیم گرفتم متغبرهای محلی را با استفاده از کتابخوانه زیر در دسترس قرار دهم که تمامی متغیرها در فایل
-.env
-قرار دارند
+To enhance security and availability, I have decided to store local variables using the following library, which allows all variables to be defined in the `.env` file:
 
 ```
-DOTENV for environment variables : https://github.com/vlucas/phpdotenv
+DOTENV for environment variables: https://github.com/vlucas/phpdotenv
 ```
 
-برای ایجاد کانتینر از کتاب خوانه زیر استفاده کردم تا بتوانم یک 
-ioc container 
-کارآمد طراحی کنم.
-```
-Container : https://github.com/thephpleague/container
-```
-
-برای آدرس دهی و مسیریابی سیستم روتینگ زیر را در نظر گرفتم که بسیار انعطاف پذیر و قدرتمند میباشد.
+For creating containers and designing an efficient IoC container, I have utilized the following library:
 
 ```
-Routing : https://github.com/thephpleague/route
+Container: https://github.com/thephpleague/container
 ```
-برای ولیدیشن و اعتبار سنجی از کتابخوانه زیر استفاده کردم که تقریبا ساختاری شبیه به لاراول دارد و انعطاف بالایی دارد که میتوانید تمام ولیدیشن های مورد نیاز خود را با استفاده از آن داشته باشید
-علاوه بر آن من یک ولیدیشن شخصی سازی شده نیز نوشتم برای مشخص کردن یکتا بودن یک فیلد در دیتابیس تا نشان دهم چگونه میتوان یک ولیدیشن شخصی سازی شده نیز نوشت
-(exists)
+
+To handle routing and URL mapping, I have employed a flexible and powerful routing library:
+
+```
+Routing: https://github.com/thephpleague/route
+```
+
+For validation and data verification, I have used the following library, which provides a structure similar to Laravel and allows for flexible validation rules:
+
 ```
 https://github.com/vlucas/valitron
 ```
 
- برای دیتابیس نیز از داکترین استفاده کردم که ORM پیش فرض فریمورک سیمفونی میباشد که استفاده آسان و در عین حال قدرت بسیار بالایی دارد.
+Additionally, I have implemented custom validation rules, such as the `exists` rule for ensuring the uniqueness of a field in the database, to demonstrate how custom validation rules can be created.
+
+For database interactions, I have utilized Doctrine, which is the default ORM for the Symfony framework. It offers ease of use and provides powerful features:
 
 ```
 https://www.doctrine-project.org/index.html
 ```
+
+Please note that this README assumes some basic knowledge of PHP, Composer, and Docker. If you encounter any issues or have further questions, please don't hesitate to reach out to the writer mentioned at the beginning of this document.
+
+#END
